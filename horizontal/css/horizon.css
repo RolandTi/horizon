@@ -1,7 +1,8 @@
 /* @override 
 	https://horizon.rolandtisserand.fr/themes/horizon/horizon.css
 	http://horizon.rolandtisserand.fr/themes/horizon/horizon.css
-	https://horizon.rolandtisserand.fr/themes/horizon/horizon.css?* */
+	https://horizon.rolandtisserand.fr/themes/horizon/horizon.css?*
+	https://horizon.rolandtisserand.fr/themes/horizon/css/horizon.css?* */
 
 /* Ugly debugging tool */
 /*div, h1, h2, img, ul, li, p, header, aside, section, footer {
@@ -317,13 +318,14 @@ figure {
 @media (min-width:950px) {
 	body {
 		padding: 0;
+		height: 100%;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
 	}
 	
 	header {
-		min-width: 400px;
+		white-space: nowrap;
 	}
 	
 	main {
@@ -335,6 +337,15 @@ figure {
 		position: fixed; 
 		bottom: 0;
 		padding: 4rem;
+	}
+	
+	.scroller {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		overflow: hidden;		
+		overflow-x: scroll;
+		height: 100%;
 	}
 }
 
@@ -349,6 +360,7 @@ nav ul, footer ul {
 
 nav {
 	padding: 4rem;
+	padding-right: 8rem;
 }
 
 /* Hide link's underline only on nav */
@@ -413,6 +425,7 @@ article {
 		word-break: normal;
 		/* Fix for .album_head fit the title. No less. */
 		white-space: nowrap;
+		
 }
 	
 	.album_head > *:last-child {

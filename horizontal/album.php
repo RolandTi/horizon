@@ -4,9 +4,10 @@
 <head>
 	<?php include("_header.php"); ?>
 </head>
-<body>
+<body class="scroll-h">
 	<?php zp_apply_filter('theme_body_open'); ?>
 	<a href="#main-content" tabindex="0" class="skip-to-content">Skip to main content</a>
+	<div class="scroller">
 	
 		<header class="header">
 				<button class="toggle_nav" aria-expanded="false"><span>Menu</span></button>
@@ -52,5 +53,6 @@
 		
 		<?php include("_footer.php"); ?>
 	</footer>
+	</div>
 </body>
 </html>
