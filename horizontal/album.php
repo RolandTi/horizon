@@ -22,77 +22,34 @@
 				
 		</header>
 		
-	<main class="album_horizontal" id="hscroll">
+	<main id="hscroll" class="transition-fade">
 		
 		<div class="album_head">
 			<h1><?php printAlbumTitle(); ?></h1>
 			<?php printAlbumDesc(); ?>
+			
 		</div><!-- .album_header -->
 		
 		<div class="album_photos">
 			<?php 
 			while (next_image()):?>
+			
 				<figure><img 
-				src="<?php echo html_encode(getCustomImageURL(NULL,NULL,700,NULL,NULL,NULL,NULL,false,NULL)); ?>" 
+				src="<?php echo html_encode(getCustomImageURL(NULL,NULL,1200,NULL,NULL,NULL,NULL,false,NULL)); ?>" 
 				alt="<?php echo getBareImageTitle(); ?>" 
 				width="<?php echo getFullWidth(); ?>" 
 				height="<?php echo getFullHeight(); ?>" /></figure>
 			<?php endwhile; ?>
+			
 		</div><!-- .album_photos -->
 		
 	</main>
 		
 	<footer>
-		<script>
+<!-- 		<script src="<?php echo $_zp_themeroot; ?>/js/swup3.0.5.js"></script>
+ 		<script>const swup = new Swup({ containers: ['#hscroll']});</script> -->
+		<script src="<?php echo $_zp_themeroot; ?>/js/horizon.album.js?v=1"></script>
 		
-//		const scrollContainer = document.querySelector("main");
-
-//scrollContainer.addEventListener("wheel", (evt) => {
-//    evt.preventDefault();
-//    scrollContainer.scrollLeft += evt.deltaY;
-//});
-		
-//	const mediaQuery = window.matchMedia('(min-width: 950px)')	;	
-//	function handleTabletChange(e) {
-//		  // Check if the media query is true
-//		  if (e.matches) {
-//			console.log('Taille OK');
-//		    scrollContainer.addEventListener("wheel", (evt) => {
-//				evt.preventDefault();
-//				console.log('fonction ok');
-//				scrollContainer.scrollLeft += evt.deltaY;});
-//		}
-//	}
-//	// Register event listener
-//	mediaQuery.addListener(handleTabletChange);
-//	
-//	// Initial check
-//	handleTabletChange(mediaQuery);
-	
-		</script>
-		
-<!--		<script type="text/javascript">
-			function force_scroll_sideways(element) {
-			  element.addEventListener("wheel", (event) => {
-			    event.preventDefault();
-			
-			    let [x, y] = [event.deltaX, event.deltaY];
-			    let magnitude;
-			
-			    if (x === 0) {
-			      magnitude = y > 0 ? -30 : 30;
-			    } else {
-			      magnitude = x;
-			    }
-			
-			    //console.log({ x, y, magnitude });
-			    element.scrollBy({
-			      left: magnitude
-			    });
-			  });
-			}		
-			const element = document.querySelector("#hscroll");	
-		</script>-->
 		<?php include("_footer.php"); ?>
 	</footer>
 </body>

@@ -22,15 +22,9 @@
 				
 		</header>
 		
-		
-		<main class="container main two-cols xl-space">
-			
-			<h1 class="page_title"><?php echo gettext('Contact us'); ?></h1>
-			
-			<div class="contact-form">
-				<?php printContactForm(); ?>
-			</div>
-			
+		<main class="page">
+			<h1><?php echo gettext('Contact us'); ?></h1>
+			<?php printContactForm(); ?>
 		</main>
 		
 		<footer class="footer"><?php include("_footer.php"); ?></footer>

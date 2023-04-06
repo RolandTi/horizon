@@ -22,7 +22,7 @@
 				
 		</header>
 		
-		<main class="main page_template">
+		<main class="page">
 			<article>
 			<h1><?php printPageTitle(); ?></h1>
 			
