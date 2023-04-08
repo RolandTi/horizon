@@ -14,7 +14,7 @@ function my_checkPageValidity($request, $gallery_page, $page) {
 					$gallery_page = 'news.php'; //	really a news page
 					break;
 				}
-				if (getOption('collections_homepage')) {
+				if (getOption('horizon_homepage')) {
 					return $page == 1; // only one page if zenpage enabled.
 				}
 			}

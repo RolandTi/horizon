@@ -15,15 +15,14 @@ class ThemeOptions {
 		$me = basename(dirname(__FILE__));
 		
 		// set core theme option defaults
-		setThemeOptionDefault('Allow_search', true);
 		setThemeOptionDefault('Use_thickbox', true);
-		setThemeOptionDefault('albums_per_page', 8);
-		setThemeOptionDefault('images_per_page', 20);
-		setThemeOption('image_size', 2200, NULL, 'horizon');
+		setThemeOptionDefault('albums_per_page', 50);
+		setThemeOptionDefault('images_per_page', 200);
+		setThemeOption('image_size', 1500, NULL, 'horizon');
 		setThemeOption('image_use_side', 'longest', NULL, 'horizon');
-		setThemeOption('thumb_size', 450, NULL, 'horizon');
-		setThemeOptionDefault('thumb_crop_width', 450);
-		setThemeOptionDefault('thumb_crop_height', 450);
+		setThemeOption('thumb_size', 500, NULL, 'horizon');
+		setThemeOptionDefault('thumb_crop_width', 500);
+		setThemeOptionDefault('thumb_crop_height', 500);
 		setThemeOptionDefault('thumb_crop', 1);
 		setThemeOptionDefault('thumb_transition', 1);
 
@@ -38,9 +37,8 @@ class ThemeOptions {
 			cacheManager::deleteCacheSizes($me);
 			cacheManager::addDefaultThumbSize();
 			cacheManager::addDefaultSizedImageSize();
-			cacheManager::addCacheSize($me,null, null, 1400, null, null, null, null, true, false);
-			cacheManager::addCacheSize($me,null, null, 1024, null, null, null, null, true, false);
-			cacheManager::addCacheSize($me,null, 400, null, null, null, null, null, true, false);
+			cacheManager::addCacheSize($me,null, null, 1500, null, null, null, null, true, false);
+			cacheManager::addCacheSize($me,null, 500, null, null, null, null, null, true, false);
 		}
 		if (function_exists('createMenuIfNotExists')) {
 			$menuitems = array(
