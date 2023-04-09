@@ -2,7 +2,7 @@
 A Zenphoto CMS photo gallery theme.
 Inspired by the defunct Expositio theme (Wordpress).
 
-![Screenshot of Horizon theme](horizon_large.jpg)
+![Screenshot of Horizon theme](horizon_large_01.jpg)
 
 ## Prerequisite
 - You need to activate the `print_album_menu` plugin in order to list albums on the menu.
