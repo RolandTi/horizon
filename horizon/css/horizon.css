@@ -25,20 +25,6 @@
 	box-sizing: border-box;
 }
 
-@font-face {
-src: url('../fonts/Lora[wght].woff2?v=3.005') format('woff2-variations');
-font-family: 'Lora';
-font-style: normal;
-font-display: swap;
-}
-
-@font-face {
-src: url('../fonts/Lora-Italic[wght].woff2?v=3.005') format('woff2-variations');
-font-family: 'Lora';
-font-style: italic;
-font-display: swap;
-}
-
 /* Latin Basic */
 @font-face {
   font-family: 'Fraunces';
@@ -104,7 +90,7 @@ html {
 	-webkit-text-size-adjust: 100%;
 	tab-size: 4;
 	height: 100%;
-	font-family: Fraunces, Lora, 'Lora var','Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
+	font-family: Fraunces, Lora,'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
 	font-weight: 300;
 	font-size: 62.5%;
 	background-color: var(--white);
@@ -302,6 +288,10 @@ figure {
 	margin-bottom: var(--blank);
 }
 
+figcaption {
+	margin-top: var(--blank);
+}
+
 .skip-to-content {
 	left: 50%;
 	position: absolute;
@@ -416,14 +406,6 @@ figure {
 }
 
 
-/* INDEX */
-
-.index_albums img {
-	aspect-ratio: 1 / 1;
-	object-fit: cover;
-	object-position: 50% 50%;
-	transition: all 1s ease-in-out 0s;
-}
 /* NAV */
 
 nav ul, footer ul {
@@ -448,6 +430,22 @@ nav a:hover {
 	text-decoration: underline;
 }
 
+.navbar_title {
+		font-weight: 500;
+		margin-bottom: 1ch;
+		display: block;
+	}
+	
+		/* Add a double dash to separate pages from albums */
+	#pages::before {
+		content: '--';
+	}
+	
+		/* INDEX [gallery.php] */
+	#hscroll.index img {
+		border-radius: 1rem;
+	}
+
 .index_albums {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -456,26 +454,24 @@ nav a:hover {
 	gap: var(--blank);
 }
 
+img[alt*="protected"] {
+	background-color: rgba(120, 120, 120, 0.47);
+}
+
+/* PAGES (not album.php or gallery.php) */
+
 article {
 	max-width: 90rem;
 	padding-bottom: calc(var(--blank) * 3);
 }
 
-#pages::before {
-	content: '--';
-}
-
-.navbar_title {
-	font-weight: 500;
-	margin-bottom: 1ch;
-	display: block;
-}
+/* ALBUM [album.php] */
 
 .album_photos {
 	display: block;
 }
 
-.album_head {
+.album_head,.index_header {
 	margin-bottom: calc(var(--blank) * 3);
 }
 
@@ -484,6 +480,58 @@ article {
 		padding-left: var(--blank);
 	}
 	
+
+/* Index */
+
+/* INDEX */
+	#hscroll.index img {
+		max-height: 40rem;
+		padding-bottom: 0;
+	}
+	
+	#index {
+		padding-top: 4rem;
+		padding-right: var(--blank);
+	}
+	
+	#hscroll.index {
+		padding-top: 4rem;
+		max-height: 50rem;
+		
+	}
+
+	/* Hover effect on index page */
+	.index img {
+		transition: all .25s ease-in;
+		aspect-ratio: 3 / 4;
+		object-fit: cover;
+	}
+	
+	.index img:hover {
+/*		aspect-ratio:auto;*/
+}
+	
+	.index .album_photos:hover img:not(:hover) {
+		opacity: .50;
+		filter: grayscale(.3);
+		
+	}
+	
+	.index_header {
+		min-width: 50rem;
+			margin-right: calc(var(--blank) * 3);
+
+	}
+	.index_header h1 {
+		display: none;
+	}
+	
+	.index_header p {
+		margin-top: 0;
+	}
+	
+	/* Album page */
+
 	#hscroll {
 		display: flex;
 		flex-direction: row;
@@ -496,20 +544,7 @@ article {
 		padding-bottom: var(--blank);
 		width: auto !important;
 		max-width: unset; /*To fix the max-width on msartphone*/
-	}
-	
-	#index {
-		padding-top: 4rem;
-		padding-right: var(--blank);
-	}
-	
-	.index_header h1 {
-		display: none;
-	}
-	
-	.index_header p {
-		margin-top: 0;
-	}
+		}
 	
 	.album_head {
 		display: flex;
@@ -551,21 +586,13 @@ article {
 		height: 100%;
 	}
 	
+
+/* Page */
+	
 	.page {
 		padding: var(--blank);
 		padding-top: 4rem;
 	}
-}
-
-/* SWUP */
-
-.transition-fade {
-	transition: 0.4s;
-	opacity: 1;
-}
-
-html.is-animating .transition-fade {
-	opacity: 0;
 }
 
 @media (min-width:1200px) {

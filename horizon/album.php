@@ -4,7 +4,7 @@
 <head>
 	<?php include("_header.php"); ?>
 </head>
-<body class="scroll-h">
+<body>
 	<?php zp_apply_filter('theme_body_open'); ?>
 	<a href="#hscroll" tabindex="0" class="skip-to-content">Skip to main content</a>
 	<div class="scroller">
@@ -23,7 +23,7 @@
 				
 		</header>
 		
-	<main id="hscroll" class="transition-fade">
+	<main id="hscroll">
 		
 		<div class="album_head">
 			<h1><?php printAlbumTitle(); ?></h1>
