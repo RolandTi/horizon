@@ -7,7 +7,7 @@
 
 <body>
 	<?php zp_apply_filter('theme_body_open'); ?>
-	<a href="#main-content" tabindex="0" class="skip-to-content">Skip to main content</a>
+	<a href="#index" tabindex="0" class="skip-to-content">Skip to main content</a>
 	
 	<header class="header">
 			<button class="toggle_nav" aria-expanded="false"><span>Menu</span></button>
@@ -23,13 +23,13 @@
 			
 	</header>
 	
-	<main id="hscroll">
-		<div class="album_head">
+	<main id="index">
+		<div class="index_header">
 			<h1><?php printGalleryTitle(); ?></h1>
 			<p><?php printGalleryDesc(); ?></p>
 		</div><!-- .album_header -->
 		
-		<div class="album_photos">
+		<div class="index_albums">
 				<?php while (next_album()): ?>
 				<figure><a href="<?php echo html_encode(getAlbumURL()); ?>"><?php printCustomAlbumThumbImage(getAnnotatedAlbumTitle(), NULL, NULL, 1200, NULL, NULL, NULL, null, NULL,NULL); ?></a><figcaption><?php printAlbumTitle(); ?></figcaption>
 				</figure>

@@ -6,7 +6,7 @@
 </head>
 <body class="scroll-h">
 	<?php zp_apply_filter('theme_body_open'); ?>
-	<a href="#main-content" tabindex="0" class="skip-to-content">Skip to main content</a>
+	<a href="#hscroll" tabindex="0" class="skip-to-content">Skip to main content</a>
 	<div class="scroller">
 	
 		<header class="header">
@@ -50,7 +50,6 @@
 	</main>
 		
 	<footer>
-<!-- 		<script>const swup = new Swup({ containers: ['#hscroll']});</script>-->
 		<?php include("_footer.php"); ?>
 	</footer>
 	</div>

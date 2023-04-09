@@ -22,7 +22,7 @@
 				
 		</header>
 		
-		<main class="page">
+		<main class="page" id="main-content">
 			<h1><?php echo gettext('Contact us'); ?></h1>
 			<?php printContactForm(); ?>
 		</main>
