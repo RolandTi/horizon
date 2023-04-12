@@ -10,7 +10,7 @@ Inspired by the defunct Expositio theme (Wordpress).
 - There is no pagination, you must edit the pictures per page according to your biggest gallery.
 
 ## Supported plugins (Not that much)
-- zenpage
+- zenpage (only pages, not news)
 - contact
 - cacheManager
 - print_album_menu / **required**
